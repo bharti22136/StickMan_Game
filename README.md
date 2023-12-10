@@ -1,1 +1,36 @@
-# StickMan_Game
+# Stick Hero Game
+Stick Hero Game is a simple JavaFX game where players control a stickman to traverse platforms by extending and rotating a stick.
+
+StickHero game Initializes from HelloApplication class which opens home.fxml which has HomePage
+as its controller class .
+
+DESIGN PATTERN:
+Class Pillars-implements Flyweight design pattern
+Class Cherries-implements Singleton design pattern
+
+Class StickHero implements interface Stick
+Class Music have instances in HomePage and MainGame for background image
+Class Score is abstract class which maintains the currentscore ,cherries  and bestscore
+
+## Features
+- *Home Page:* Start the game from the home screen.
+- *Main Game:* Play the Stick Hero game by extending the stick to cross platforms and collect cherries.
+
+## Getting Started
+
+Home Page:
+Click on the "Play" button to enter the main game.
+Explore other options on the home screen.
+
+Main Game:
+Press and hold the "Enter" key to extend the stick.
+Release the "Enter" key to rotate the stick and land on the platform.
+Press shift key to flip stickman
+Collect cherries to increase your score which will bw reflected on the terminal.
+Traverse platforms to achieve the highest score.
+
+##Code Structure
+HomePage class: Manages the home screen and navigation to the main game.
+MainGame class: Implements the Stick Hero game mechanics.
+StickHero class: Represents the stickman and controls stick movement and rotation.
+Other classes: Handle background, music, and scoring.
