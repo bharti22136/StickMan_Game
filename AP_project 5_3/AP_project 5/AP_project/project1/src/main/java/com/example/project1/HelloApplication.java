@@ -37,9 +37,8 @@ public class HelloApplication extends Application {
         primaryStage.setTitle("Stick Hero Game");
         primaryStage.setScene(scene);
 
-        // Get the controller instance and play background music
+        
         primaryStage.setOnShown(e -> {
-            // Get the controller instance and play background music
             homePage = loader.getController();
             homePage.setMusic();
 
@@ -65,11 +64,11 @@ public class HelloApplication extends Application {
         launch();
         Cherries cherryCollector = Cherries.getInstance();
 
-        // Collecting cherries
+        
         cherryCollector.collectCherries(10);
         cherryCollector.collectCherries(7);
 
-        // Displaying the total collected cherries
+        
         System.out.println("Total Cherries Collected: " + cherryCollector.getCherryCount());
     }
     public static class CherryCollector {
