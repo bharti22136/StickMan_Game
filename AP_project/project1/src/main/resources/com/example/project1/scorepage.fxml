@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project1.GameOverPage">
+    <AnchorPane minHeight="659.0" minWidth="1270.0" prefHeight="200.0" prefWidth="200.0">
+        <children>
+
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#375169" height="654.0" layoutX="-1.0" layoutY="-3.0" opacity="0.58" stroke="#375169" strokeType="INSIDE" width="1270.0" y="6.0" />
+         <Text fill="#f4f2f2" layoutX="406.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME OVER!" AnchorPane.bottomAnchor="577.5296875" AnchorPane.leftAnchor="406.0" AnchorPane.rightAnchor="798.41796875" AnchorPane.topAnchor="60.3046875">
+            <font>
+               <Font size="72.0" />
+            </font>
+         </Text>
+         <Rectangle arcHeight="30.0" arcWidth="45.0" fill="#e5eaef" height="200.0" layoutX="449.0" layoutY="152.0" stroke="#f2eeee" strokeType="INSIDE" width="330.0" />
+         <Text layoutX="580.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE" textAlignment="CENTER">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Text>
+         <Text layoutX="588.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BEST" textAlignment="CENTER">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Text>
+         <Text layoutX="594.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+            <font>
+               <Font size="49.0" />
+            </font>
+         </Text>
+         <Text layoutX="581.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" y="-7.0">
+            <font>
+               <Font size="49.0" />
+            </font>
+         </Text>
+         <Group fx:id="homeButton" accessibleRole="BUTTON" layoutX="457.0" layoutY="406.0" onMouseClicked="#goHomePage">
+            <children>
+               <Rectangle arcHeight="11.0" arcWidth="15.0" fill="#647789" height="96.0" stroke="#647789" strokeType="INSIDE" width="95.0" />
+               <ImageView fitHeight="103.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@image_prev_ui.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Group>
+         <Group fx:id="restart" layoutX="688.0" layoutY="406.0" translateX="-13.0" onMouseClicked="#restartGame">
+            <children>
+               <Rectangle arcHeight="11.0" arcWidth="15.0" fill="#647789" height="96.0" stroke="#647789" strokeType="INSIDE" width="95.0" />
+               <ImageView fitHeight="103.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@image-removebg-preview.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Group>
+         <Group  layoutX="566.0" layoutY="410.0" translateY="-3.0" >
+            <children>
+               <Rectangle arcHeight="11.0" arcWidth="15.0" fill="#647789" height="96.0" stroke="#647789" strokeType="INSIDE" width="95.0" />
+               <ImageView fitHeight="79.0" fitWidth="76.0" layoutX="9.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@image-removebg-preview (1).png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Group>
+        </children>
+    </AnchorPane>
+
+
+</VBox>
