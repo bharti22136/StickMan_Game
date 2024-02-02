@@ -6,15 +6,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.awt.event.MouseEvent;
 import java.util.*;
+
 public class GameOverPage {
     Music music=new Music();
     private BackgroundPicture backgroundPicture;
 
     public GameOverPage() {
-
     }
 
     public void setMusic(Music music) {
