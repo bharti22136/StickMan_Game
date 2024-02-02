@@ -1,5 +1,4 @@
 package com.example.project1;
-
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,34 +19,24 @@ public class HomePage implements Initializable {
     private HomePage homePage;
     private MainGame mainPage;
 
-
     public void setMusic() {
         music.backgroundConstant();
     }
-
     public void titleName(){
-
     }
     public void playButton(){
-
     }
-
     public void setBackgroundPicture(BackgroundPicture backgroundPicture) {
         backgroundPicture.homeScreenPicture();
     }
-
-
     private Stage stage;
     private Scene scene;
-
-
     public void switchToScreen1(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
     @FXML
     public void handlePlayButton(ActionEvent event) {
@@ -67,12 +55,8 @@ public class HomePage implements Initializable {
             e.printStackTrace();
         }
     }
-
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         setMusic();
     }
 }
