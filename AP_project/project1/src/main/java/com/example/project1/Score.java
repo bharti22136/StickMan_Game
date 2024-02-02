@@ -1,10 +1,9 @@
 package com.example.project1;
 import java.util.*;
 public abstract class Score{
-
     private int score;
     private int bestScore;
-
+    
     public Score(int score,int bestScore) {
         this.score = score;
         this.bestScore=bestScore;
@@ -33,5 +32,4 @@ public abstract class Score{
     public void bestScore(){
 
     }
-
 }
