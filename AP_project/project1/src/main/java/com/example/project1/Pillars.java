@@ -1,5 +1,4 @@
 package com.example.project1;
-//package com.example.project1;
 import java.awt.*;
 import java.util.*;
 import javafx.scene.shape.Rectangle;
@@ -9,11 +8,8 @@ public class Pillars {    // Flyweight design pattern is used in this
     private int distanceBetweenPillars;
     private float perfectPoint;
     private int pillarXVelocity;
-
-    //    private static Pillars pillars;
     private static Map<Rectangle, Pillars> pillarList = new HashMap<Rectangle, Pillars>();
-
-
+    
     public Pillars(Rectangle rectangle) {
         this.pillarWidth=pillarWidth;
         this.pillarHeight=pillarHeight;
@@ -22,19 +18,12 @@ public class Pillars {    // Flyweight design pattern is used in this
         this.pillarXVelocity=pillarXVelocity;
 
     }
-    //    public static Pillars getInstance(){      // Singleton Design Pattern is used here
-//        if(pillars==null){
-//            pillars=new Pillars();
-//        }
-//        return pillars;
-//    }
     public static Pillars getInstance(Rectangle key) {
         if (!pillarList.containsKey(key)) {
             pillarList.put(key, new Pillars(key));
         }
         return pillarList.get(key);
     }
-
 
     public void setPillarMotion(int pillarXVelocity) {
         this.pillarXVelocity = pillarXVelocity;
@@ -63,5 +52,4 @@ public class Pillars {    // Flyweight design pattern is used in this
     public void setPerfectPoint(float perfectPoint) {
         this.perfectPoint = perfectPoint;
     }
-
 }
