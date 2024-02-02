@@ -62,18 +62,14 @@ public class StickHero implements Stick {
             System.out.println("stick not null");
             double originalY = stickRectangle.getY();
             double originalHeight = stickRectangle.getHeight();
-
             stickRectangle.setOnKeyPressed(event -> {
                 if (event.getCode() == KeyCode.ENTER && !isStickFallen) {
-                    double increment = 1; // Change the increment as needed
+                    double increment = 1; // Stick is incremented by 1
                     stickRectangle.setHeight(originalHeight + increment);
                     stickRectangle.setY(originalY - increment);
 //                    music1.stickIncreaseSound();
-                    System.out.println("here====================");
-
                 }
             });
-
                 stickRectangle.setOnKeyReleased(event -> {
                     if (event.getCode() == KeyCode.ENTER) {
                         // Set the flag to true when the space bar is released
@@ -81,7 +77,6 @@ public class StickHero implements Stick {
                         stickFallDown(stickRectangle,stickMan); // Rotate the stick when the space bar is released
                     }
                 });
-
             stickRectangle.setFocusTraversable(true); // Allow the rectangle to receive key events
         }
     }
@@ -111,15 +106,12 @@ public class StickHero implements Stick {
             isStickFallen=true;
             isFallen= moveHero(stickMan,stickHeight);
         }
-
-
     }
     public boolean moveHero(Group stickMan,double stickHeight){
         TranslateTransition stickManTransition = new TranslateTransition();
         stickManTransition.setNode(stickMan);
         if((pillar2.getLayoutX()-(pillar1.getLayoutX()+pillar1.getWidth()))>stickHeight  || (pillar2.getLayoutX()-(pillar1.getLayoutX()+pillar1.getWidth())+pillar2.getWidth())<stickHeight){
             stickManTransition.setByX(stickHeight);
-
         }
         else{
             stickManTransition.setByX(pillar2.getLayoutX()+pillar2.getWidth()-pillar1.getWidth()-pillar1.getLayoutX());
@@ -135,17 +127,15 @@ public class StickHero implements Stick {
         }
         else{
             System.out.println("not falling");
-
         }
         return isFallen;
-
     }
+    
     public void stopHero(){
-
     }
     public void kickTheStick(){
-
     }
+    
     public void fallDown(Group stickMan){
         System.out.println("fall down");
         TranslateTransition stickManTransition = new TranslateTransition();
@@ -153,23 +143,18 @@ public class StickHero implements Stick {
         stickManTransition.setByY(100);
         stickManTransition.play();
         isFallen=true;
-
     }
+    
     public boolean isStickRotated() {
         return isStickRotated;
     }
+    
     public void flipDown(){
-
     }
+    
     public void flipUp(){
-
     }
+    
     public void moveCap(){
-
     }
-
-
-
-
-
 }
