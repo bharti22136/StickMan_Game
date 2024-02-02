@@ -1,13 +1,11 @@
 package com.example.project1;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 
 public class Music {
     private MediaPlayer backgroundPlayer;
-
     public void backgroundConstant() {
         try {
             // Load the music file
@@ -31,13 +29,10 @@ public class Music {
         try {
 
             mediaPlayer1.setCycleCount(1);
-//            mediaPlayer1.setCycleCount(MediaPlayer.INDEFINITE);
-
             // Release resources after the sound has finished playing
             mediaPlayer1.setOnEndOfMedia(() -> {
                 mediaPlayer1.dispose();
             });
-
             // Play the music
             mediaPlayer1.play();
         } catch (Exception e) {
@@ -49,8 +44,6 @@ public class Music {
             mediaPlayer1.setCycleCount(0);
         }
     }
-
-
     public void stickFallingSound(){
 
     }
@@ -72,6 +65,4 @@ public class Music {
     public void turnUpsideSound(){
 
     }
-
-
 }
