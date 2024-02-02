@@ -1,5 +1,4 @@
 package com.example.project1;
-
 import javafx.scene.Group;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
