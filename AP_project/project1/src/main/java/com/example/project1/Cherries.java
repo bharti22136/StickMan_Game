@@ -1,8 +1,4 @@
 package com.example.project1;
-
-
-// package com.example.project1;
-
 public class Cherries {   // Singleton design pattern is used here
     private double  x_coordinate,y_coordinate;
     private static Cherries gen=null;
