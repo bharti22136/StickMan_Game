@@ -17,8 +17,8 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.util.*;
+
 public class MainGame extends StickHero {
     private BackgroundPicture backgroundPicture;
     Timeline incrementStickLengthTimeline;
@@ -47,28 +47,21 @@ public class MainGame extends StickHero {
     public Group man;
     @FXML
     public VBox cherriesPane;
-//    @FXML
-//    private Text currentScore1;
     @FXML
     public Rectangle stickRectangle;
-
     @FXML
     public Rectangle stickRectangle1;
     @FXML
     public Rectangle stickRectangle2;
     @FXML
     public int numberOfCherriesCollected=0;
-
     @FXML
     public Rectangle stickRectangle3;
-
     List<Rectangle> stickList;
     List<Rectangle> pillarList=Arrays.asList(pillar1,pillar2,pillar3,pillar4);
-
     Timeline[] incrementStickLengthTimelines;
     Rectangle[] stickRectangles;
-
-//    Pillars pillars=Pillars.getInstance();
+    
     public MainGame() {
         super(0, 0, 0);
         initializeStickList();
@@ -79,18 +72,14 @@ public class MainGame extends StickHero {
     private void initializeStickList() {
         stickList = Arrays.asList(stickRectangle, stickRectangle1, stickRectangle2, stickRectangle3);
     }
-
     public void setBackgroundPicture(BackgroundPicture backgroundPicture) {
         backgroundPicture.mainBackgroundPicture();
     }
-
     public void setMusic() {
         music.backgroundConstant();
     }
     public void isPerfectPoint(){
-
     }
-
     @FXML
     public void initialize() {
         initializeStickList();
@@ -117,11 +106,8 @@ public class MainGame extends StickHero {
         timeline.setCycleCount(Timeline.INDEFINITE); // Infinite loop
         timeline.play();
         setMusic();
-
-
         incrementStickLengthTimelines = new Timeline[stickList.size()];
         stickRectangles = new Rectangle[stickList.size()];
-
 
         for (int i = 0; i < stickList.size(); i++) {
             Rectangle currentRectangle = stickList.get(i);
@@ -152,9 +138,7 @@ public class MainGame extends StickHero {
         return timeline1;
     }
 
-
     public void increaseStick(Rectangle rectangle){
-
         System.out.println(isStickRotated());
         if (isStickRotated()) {
             Arrays.stream(incrementStickLengthTimelines).forEach(Timeline::stop);
@@ -162,7 +146,6 @@ public class MainGame extends StickHero {
         } else {
             incrementStickLength(rectangle, stickMan);
         }
-
     }
 
     @FXML
@@ -183,29 +166,29 @@ public class MainGame extends StickHero {
         }
     }
 
-
     private TranslateTransition createBackgroundTransition(ImageView imageView) {
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(imageView);
         transition.setByX(-imageView.getBoundsInParent().getWidth());
-        transition.setDuration(Duration.seconds(4)); // You can adjust the duration
+        transition.setDuration(Duration.seconds(4)); 
         return transition;
     }
+    
     public Timeline getIncrementStickLengthTimeline(){
         return incrementStickLengthTimeline;
     }
+    
     @FXML
     public void goToEndGamePage(ActionEvent event) {
         try {
             // Load the MainGame.fxml file
             FXMLLoader loader = new FXMLLoader(getClass().getResource("scorepage.fxml"));
             Parent endGameRoot = loader.load();
-            GameOverPage endGameController = new GameOverPage(); // Create an instance manually
+            GameOverPage endGameController = new GameOverPage(); // Created an instance manually
             loader.setController(endGameController);
             Scene mainGameScene = new Scene(endGameRoot);
             Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setScene(mainGameScene);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
